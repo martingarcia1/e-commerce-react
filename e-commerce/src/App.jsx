@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <ItemListContainer mensaje="¡Bienvenido a nuestra tienda!" />
+      <ItemListContainer saludo={"¡Bienvenido a nuestra tienda!"} edad={20} saludar={() => console.log("Hola")}   />
       
     </>
   )

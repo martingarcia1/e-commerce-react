@@ -1,15 +1,11 @@
-import PropTypes from "prop-types";
-
-function ItemListContainer({ mensaje }) {
+const ItemListContainer = ({ saludo, edad, saludar }) => {
   return (
-    <section style={{ padding: '2rem', textAlign: 'center' }}>
-      <h2>{mensaje}</h2>
-    </section>
+    <div onClick={saludar}>
+      <h1>{saludo}</h1>
+      <h2>Edad: {edad}</h2>
+    </div>
   );
 }
 
-ItemListContainer.propTypes = {
-  mensaje: PropTypes.string.isRequired,
-};
 
 export default ItemListContainer; 
