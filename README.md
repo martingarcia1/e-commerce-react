@@ -114,7 +114,7 @@ npm run dev
 
 ## 📝 Licencia
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](e-commerce/LICENSE.md) para más detalles.
 
 ---
 
