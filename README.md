@@ -1,103 +1,121 @@
 # 🛒 E-commerce ReactJS | Coderhouse
 
-¡Bienvenido/a! Este proyecto es parte del curso de **ReactJS** en [Coderhouse](https://www.coderhouse.com/), y corresponde a la **Entrega 1: Crea tu landing**.
+![Avanzar Group](https://img.shields.io/badge/Avanzar%20Group-Cursos%20Online-blue)
+[![React](https://img.shields.io/badge/React-18.x-61dafb)]()
+[![Vite](https://img.shields.io/badge/Vite-5.x-646cff)]()
+[![Firebase](https://img.shields.io/badge/Firebase-10.x-ffca28)]()
+
+¡Bienvenido/a! Este proyecto es parte del curso de **ReactJS** en [Coderhouse](https://www.coderhouse.com/). Es un e-commerce especializado en la venta de cursos online de Avanzar Group.
+
+## 🚀 Descripción del Proyecto
+
+Este e-commerce está diseñado para ofrecer una experiencia de usuario fluida en la compra de cursos online. Los usuarios pueden explorar diferentes categorías, ver detalles de los cursos y realizar compras de manera intuitiva.
+
+### 🎯 Categorías de Cursos
+- 💼 Negocios
+- 📊 Administración
+- 💻 Tecnología
+- 💰 Finanzas
 
 ---
 
-## 🚀 Descripción
-Desarrollé los primeros componentes base para un e-commerce, sentando las bases de la homepage. Esta entrega incluye una barra de navegación con enlaces, logo y widget de carrito, además de un contenedor que recibe un mensaje personalizado mediante props.
+## Entrega Final: Web App de E-commerce
 
----
+Desarrolla el Front End de una Single Page Application de e-commerce, utilizando React como herramienta base para crear las distintas piezas (componentes) de la interfaz de usuario (UI). Implementa los diferentes patrones y conceptos específicos de React, como el Virtual DOM y los hooks. Para la interacción entre las mismas, incorpora manejo de eventos, navegación entre componentes, y administración de datos globales (por ejemplo: el estado del carrito de compras). Como herramienta de estilado podrás utilizar de forma opcional CSS, SASS, o librerías de estilos (Bootstrap) o de componentes (Material UI). Podrás seleccionar una temática a elección, creando tu propio catálogo de productos, o utilizando herramientas generadoras de datos o "mock data". Implementa la conexión a un servicio en la nube (Firebase) que te provea de una Base de Datos donde almacenar el listado de tus productos, y te permita guardar registros de las compras realizadas por los usuarios del e-commerce.
 
-## 🎯 Objetivos
-- Comprender los conceptos básicos de React y su estructura de componentes.
-- Crear las bases para la homepage del e-commerce.
+### 🎓 Objetivos Principales
+- 🌐 Desarrollar el front-end de una webapp de tipo e-commerce con React.
+- 🔥 Incorporar Firestore como base de datos.
 
----
+### ⚙️ Requisitos
 
-## 🧩 Componentes realizados
-- **NavBar:** Barra de navegación con enlaces, logo y el widget del carrito.
-- **CartWidget:** Ícono de carrito de compras y contador de productos.
-- **ItemListContainer:** Contenedor que recibe un mensaje de bienvenida por props.
+#### 📦 Listado y Detalle de productos
+- 🔄 Generación dinámica del listado de productos y acceso a la vista en detalle de cada uno (`ItemListContainer` y `ItemDetailContainer`)
+- 🏗️ Separación en componentes contenedores y de presentación para separar responsabilidad de tareas en los mismos (`ItemListContainer`, `ItemList`)
+- 🔢 Implementación de componente `ItemCount` que permita seleccionar cantidad de unidades a agregar al carrito y realice las validaciones necesarias (valor mínimo, límite por stock, etc.)
+- 👁️ Ocultar el componente `ItemCount` en `ItemDetail` luego de agregar un producto al carrito.
 
----
+#### 🧭 Navegación
+- 🔗 Navegación entre las secciones de catálogo, categorías, detalle, carrito y checkout, utilizando React Router y mediante enlaces en el componente NavBar.
+- ⚡ Navegación respetando el modelo Single Page App (sin que se generen recargas de la página del navegador)
+- 📱 Experiencia fluida y responsive
 
-## 📁 Organización
-- Todos los componentes se encuentran en la carpeta `src/components`.
-- `NavBar` e `ItemListContainer` se renderizan en `App.jsx`.
-- `CartWidget` se renderiza dentro de `NavBar`.
-- Se utiliza una prop para enviar un string de bienvenida a `ItemListContainer`.
+#### 🛍️ Criterios de compras
+- 💾 Almacenamiento del estado de carrito de compras mediante Context.
+- 🧮 Mostrar el contenido del carrito dentro del componente `Cart` (productos, cantidades, subtotales, totales, etc.)
+- 🛒 Mostrar un icono/imágen del carrito en el componente `CartWidget`. Debe mostrar el total de unidades agregadas al context
 
----
+#### 🔥 Firebase
+- 📚 Implementación de Firestore como base de datos.
+- 📝 Creación de una colección donde se almacene la información de todos los productos del e-commerce, y realizar las consultas desde React para mostrarlos en la app.
+- 📦 Generación de un documento en Firestore al confirmar una compra, registrando los detalles de la misma.
 
-## 💡 Recomendaciones
-- Puedes personalizar los estilos usando CSS, Bootstrap o cualquier librería de UI de React.
-- ¡Las Props son importantes! No olvides utilizarlas en tus componentes.
+#### 👥 Experiencia de usuario
+- ⌛ Utilizar renderizado condicional para mostrar loaders y mensajes condicionales, como "producto sin stock", "carrito vacío", etc.
+- ℹ️ Como finalización de la experiencia de usuario, brindarle al usuario el id (o detalles adicionales) de la orden generada en Firestore
 
----
+#### 🛠️ Buenas prácticas y convenciones
+- 📁 Respetar las convenciones y consignas del curso para los nombres de variables funciones, componentes, eventos, y arquitectura de carpetas/archivos.
+- 📘 Crear un documento en formato markdown documentando brevemente el proyecto
 
+### 🏗️ Estructura de Componentes
+```
+App 📱
+├── NavBar 🎯
+│   └── CartWidget 🛒
+├── ItemListContainer 📋
+│   ├── ItemList 📜
+│   └── Item 📦
+├── ItemDetailContainer 🔍
+│   ├── ItemDetail ℹ️
+│   └── ItemCount 🔢
+├── Cart 🛍️
+│   └── CartItem 📝
+└── CheckoutForm 💳
+```
 
+### 💡 Recomendaciones
+- ✅ Asegúrate de que tu repositorio no presenta errores y es público. Te aconsejamos clonarlo y realizar una instalación de cero para testear tu app y detectar posibles errores.
+- 🚀 Realizar deploy en servicios gratuitos (ej: Vercel, Netlify).
+- 🔒 Si utilizaste variables de entorno para ocultar tus credenciales de Firebase, envíalas a tu profesor cuando realices la entrega.
+- 📊 No es necesario que envíes el enlace a tu panel de Firestore: el mismo es visible solo para el usuario administrador (es decir, accediendo con tu cuenta de google)
 
----
+### 📝 Formato de Entrega
+- 📁 Link al repositorio de GitHub con el nombre "ProyectoFinal+Apellido", por ejemplo "ProyectoFinal+Fernandez"
 
-## 📦 Instalación y uso
+### 🎯 Criterios de evaluación
+La evaluación se basará en la implementación correcta de todos los requisitos mencionados anteriormente.
+
+## 🛠️ Tecnologías Utilizadas
+
+- ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+- ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+- ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+- ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+
+## 🚀 Instalación
 
 ```bash
-# Instala las dependencias
+# Clonar el repositorio
+git clone https://github.com/martingarcia1/e-commerce-react.git
+
+# Instalar dependencias
+cd e-commerce-react
 npm install
 
-# Inicia el proyecto en modo desarrollo
+# Iniciar el proyecto en modo desarrollo
 npm run dev
 ```
 
----
+## 👤 Autor
 
-## 📋 Formato de entrega
-- El commit debe llamarse: `CreaTuLanding1+Apellido` (ejemplo: `CreaTuLanding1+Fernandez`).
-- Sube tu avance a GitHub y comparte el link del último commit.
+**Martín García**
+- GitHub: [@martingarcia1](https://github.com/martingarcia1)
 
----
+## 📝 Licencia
 
-## 🏆 Criterios de evaluación
-- Estructura y organización de componentes.
-- Uso correcto de props.
-- Presentación y funcionalidad de la landing page.
-- Buenas prácticas de desarrollo en React.
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
 
 ---
 
-¡Gracias por visitar el repositorio! 🚀
-
----
-
-## Entrega 2: Navega las rutas
-
-Implementa una herramienta de routing, la cual permitirá navegar a través de las diferentes vistas para tu tienda: catálogo principal de productos, catálogo de productos filtrados por categorías, y vista en detalle de un producto. Crea la funcionalidad necesaria para que los usuarios puedan:
-
-- Seleccionar desde el menú las distintas categorías disponibles.
-- Visualizar el listado, filtrando según esa elección.
-- Seleccionar un producto del listado y acceder a una vista en detalle del mismo, donde además contarán con una interfaz que posteriormente les permita agregar unidades al carrito.
-
-### Objetivos
-- Implementar la funcionalidad de navegación entre las diferentes vistas utilizando enlaces y rutas.
-- Desarrollar la navegabilidad básica de la aplicación, permitiendo navegar desde el catálogo al detalle de cada item.
-
-### Requisitos
-- Implementación de React Router y creación de las distintas rutas necesarias para mostrar las vistas de nuestra app.
-- División entre componentes contenedores encargados de manejar el estado y los efectos (`ItemListContainer`, `ItemDetailContainer`) y componentes de presentación, encargados del apartado visual (estructura de elementos, estilos, classNames, etc.)
-- Los componentes contenedores harán un llamado asíncrono a "Promises" que resuelvan luego de un breve retardo los datos solicitados (listado de productos, un producto)
-- Uso del método `Array.map()` y la prop `key` para listar todos los productos en el catálogo.
-- Uso del hook `useParams()` de react router para leer el segmento actual de la URL y mostrar el contenido correspondiente.
-
-### Recomendaciones
-- No olvides utilizar los parámetros URL en el array de dependencias de tu `useEffect` para generar las actualizaciones necesarias al navegar.
-- No crees diferentes rutas para cada categoría: puede parecer la solución más simple cuando tu aplicación sea pequeña, pero hará más difícil incorporar nuevas categorías y modificar la implementación en el futuro, ya que tendrás tu código duplicado en diversos componentes.
-- Crear una ruta de tipo “404” (`path="*"`) es una buena práctica y te ayudará a encontrar errores de navegación y enlaces mal formateados.
-- Puedes incluir el componente contador `ItemCount` dentro del componente `ItemDetail`.
-
-### Formato
-- Link a último commit de git. Debe tener el nombre “NavegaLasRutas+Apellido”, por ejemplo “NavegaLasRutas+Fernandez”
-- Opcional: Entrega un GIF mostrando la navegabilidad.
-
-### Criterios de evaluación
-Para la evaluación de tu Proyecto Final, tendremos en cuenta los siguientes criterios de evaluación.
+⭐️ ¡Si te gustó este proyecto, no olvides darle una estrella! ⭐️
