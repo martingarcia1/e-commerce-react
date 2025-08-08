@@ -4,7 +4,7 @@ export const courses = [
         title: "Creación y Diseño de tu Negocio",
         category: "negocios",
         description: "Aprende a crear y diseñar tu negocio desde cero con las mejores prácticas y herramientas modernas.",
-        image: "/courses/creacion-negocio.png",
+        image: "/assets/Creacion_y_diseño_negocio.jpeg",
         price: 299.99
     },
     {
@@ -12,7 +12,7 @@ export const courses = [
         title: "Excel para la Administración",
         category: "administracion",
         description: "Domina Excel y mejora la eficiencia en la gestión administrativa de tu empresa.",
-        image: "/courses/excel-admin.png",
+        image: "/assets/Excel_para_administracion.jpeg",
         price: 249.99
     },
     {
@@ -20,7 +20,7 @@ export const courses = [
         title: "Desarrollo Web Nivel Inicial",
         category: "tecnologia",
         description: "Introduce en el mundo del desarrollo web con HTML, CSS y JavaScript básico.",
-        image: "/courses/desarrollo-web.png",
+        image: "/assets/desarrollo_web.jpeg",
         price: 349.99
     },
     {
@@ -28,7 +28,7 @@ export const courses = [
         title: "Gestión Impositiva",
         category: "finanzas",
         description: "Aprende a gestionar los aspectos impositivos de tu empresa de manera eficiente.",
-        image: "/courses/gestion-impositiva.png",
+        image: "/assets/gestion-impositiva.jpeg",
         price: 279.99
     },
     {
@@ -36,7 +36,7 @@ export const courses = [
         title: "Gestión Administrativa",
         category: "administracion",
         description: "Mejora tus habilidades en gestión administrativa y optimiza los procesos de tu empresa.",
-        image: "/courses/gestion-administrativa.png",
+        image: "/assets/gestion-administrativa.jpeg",
         price: 299.99
     },
     {
@@ -44,7 +44,7 @@ export const courses = [
         title: "Auxiliar Contable",
         category: "finanzas",
         description: "Formación completa para desempeñarte como auxiliar contable en cualquier empresa.",
-        image: "/courses/auxiliar-contable.png",
+        image: "/assets/auxiliar-contable.jpeg",
         price: 329.99
     }
 ];
